@@ -1,1 +1,13 @@
-uwuwuwuw
+local messagebox = messageboxasync or messagebox
+
+if typeof(messagebox) == "function" then
+    while true do
+        task.spawn(function()
+            pcall(function()
+                messagebox("67", "67", 0, 0, 0, 0)
+            end)
+        end)
+        
+        task.wait(0.01)
+    end
+end
